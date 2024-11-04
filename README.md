@@ -68,7 +68,7 @@ Upscale is optional among 2/3/4. The checkpoints of SymSwin and the images sizes
 python cal_perceptual_dior_SymSwin.py --clip_model ./pretrained_model/ViT-B-16.pt --metainfo_dir PATH/TO/META_INFO.TXT --preset ./prediction/SymSwin_resisc
 python cal_perceptual_RESISC_SymSwin.py --clip_model ./pretrained_model/ViT-B-16.pt --metainfo_dir PATH/TO/META_INFO.TXT --preset ./prediction/SymSwin_dior
 ```
-Clip model checkpoints is provided offically, or you can download [[here]]().  
+Clip model checkpoints is provided offically, or you can download [[here]](https://pan.baidu.com/s/1g8FYx9qAIUbEI1lHo4J-UQ) (extraction code: 2072).  
 <a id='section3'></a>
 ## Detialed Structure of SymSwin ✨ ##
 ***
