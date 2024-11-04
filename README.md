@@ -73,37 +73,37 @@ Clip model checkpoints is provided offically, or you can download [[here]](https
 ## Detialed Structure of SymSwin ✨ ##
 ***
 * **Overview:** Our SymSwin is composed with three primary parts: shallow feature extraction, deep feature extraction and image reconstruction, as illustrated in *Figure 1a*. The deep feature extraction module in volving *N* cascading SymSwin groups (SymG), each of which includes a Swin Trans former block with Symmetric Multi-scale Window sizes (SyMWB) and a Cross Receptivefield Adaptive Attention (CRAA) module. The SyMWB architecture consists of a cascade of *M* Swin- DCFF attention layers followed by a convolutional layer integrated with a residual connection, as depicted in *Figure1b*. Notably, every Swin-DCFF attention layer incorporates vanilla shifted-window self-attention (SW-SA) and a modified multi-layer perceptron (MLP) with a depth-wise convolution added between two layers, as depicted in *Figure 1c*.  
-![Overview structure](https://github.com/SamJ404/SymSwin/blob/main/illstration/Fig1_overall_strructure.jpg)  
+![Overview structure](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/Fig1_overall_strructure.jpg)  
 *Figure 1*  
-* **SyWM:** We employ the symmetric window sizes expanding and shrinking at double scale. We adjust the window sizes on a block-by-block basis, hence, the window sizes in each block are complied with: ![formulate_SyMW](https://github.com/SamJ404/SymSwin/blob/main/illstration/formulate_SyWM.png). The principle is demonstrated in *Figure 2*.  
-![SyMW](https://github.com/SamJ404/SymSwin/blob/main/illstration/Fig2_SyMW.png)
+* **SyWM:** We employ the symmetric window sizes expanding and shrinking at double scale. We adjust the window sizes on a block-by-block basis, hence, the window sizes in each block are complied with: ![formulate_SyMW](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/formulate_SyWM.png). The principle is demonstrated in *Figure 2*.  
+![SyMW](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/Fig2_SyMW.png)
 *Figure 2*
 * **CRAA:** The  CRAA module involves two parts, the Cross-Receptive-field Attention (CRA) to achieve biased fusion of multi-scale representation, and the Adaptive Feed-Forward network (AFF) to emphasis on promising features. The detailed construction of CRAA is demonstrated in *Figure 3*.
-![CRAA](https://github.com/SamJ404/SymSwin/blob/main/illstration/Fig3_CRAA.jpg)
+![CRAA](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/Fig3_CRAA.jpg)
 *Figure 3*
 * **UWT Loss:** We adopt the luminance channel of the image to realize Stationary Wavelet Transform (SWT). The transform process is illustrated in *Figure 4*.  
-![SWT](https://github.com/SamJ404/SymSwin/blob/main/illstration/Fig4_SWT.jpg)
+![SWT](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/Fig4_SWT.jpg)
 *Figure 4*  
-We calculate the distance between the reconstruction image and the high-resolution image in each sub-band and sum the distances by weights, which can be formulate as ![formulate_UWT1](https://github.com/SamJ404/SymSwin/blob/main/illstration/formulate_UWT1.png), where we set *μt = [0.05, 0.025, 0.025, 0.02]* following SWT loss. The UWT distance is defined as ![formulate_UWT2](https://github.com/SamJ404/SymSwin/blob/main/illstration/formulate__UWT2.png).  
+We calculate the distance between the reconstruction image and the high-resolution image in each sub-band and sum the distances by weights, which can be formulate as ![formulate_UWT1](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/formulate_UWT1.png), where we set *μt = [0.05, 0.025, 0.025, 0.02]* following SWT loss. The UWT distance is defined as ![formulate_UWT2](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/formulate__UWT2.png).  
 <a id='section4'></a>
 ## Results ✨ ##  
 We conducted comparative experiments on NWPU-RESISC45 dataset and DIOR dataset comparing our approach with other mainstream SR algorithms based on transformers. We retrained all the models applying exactly the same training configuration for a fair evaluation.  
 <a id='section41'></a>
 ### Quantitative Results 👀 ###  
 ***
-![quantitative_table](https://github.com/SamJ404/SymSwin/blob/main/illstration/quantitative_table.png)  
+![quantitative_table](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/quantitative_table.png)  
 <a id='section42'></a>
 ### Visual Results 👀 ###  
 ***
 * **x4 scale**  
-![resiscx4_airplane](https://github.com/SamJ404/SymSwin/blob/main/illstration/resiscx4_airplane365.jpg)  
-![resiscx4_terrace](https://github.com/SamJ404/SymSwin/blob/main/illstration/resiscx4_terrace101.jpg)  
-![diorx4_12228](https://github.com/SamJ404/SymSwin/blob/main/illstration/diorx4_12228.jpg)  
-![diorx4_19237](https://github.com/SamJ404/SymSwin/blob/main/illstration/diorx4_19237.jpg)  
+![resiscx4_airplane](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/resiscx4_airplane365.jpg)  
+![resiscx4_terrace](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/resiscx4_terrace101.jpg)  
+![diorx4_12228](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/diorx4_12228.jpg)  
+![diorx4_19237](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/diorx4_19237.jpg)  
 * **x3 scale**
-![resiscx3_mobile_home_park](https://github.com/SamJ404/SymSwin/blob/main/illstration/resiscx3_mobile_home_park101.jpg)  
-![resiscx3_railway_station](https://github.com/SamJ404/SymSwin/blob/main/illstration/resiscx3_railway_station501.jpg)
-![diorx3_18337](https://github.com/SamJ404/SymSwin/blob/main/illstration/diorx3_18337.jpg)  
-![diorx3_19840](https://github.com/SamJ404/SymSwin/blob/main/illstration/diorx3_19840.jpg)
+![resiscx3_mobile_home_park](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/resiscx3_mobile_home_park101.jpg)  
+![resiscx3_railway_station](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/resiscx3_railway_station501.jpg)
+![diorx3_18337](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/diorx3_18337.jpg)  
+![diorx3_19840](https://github.com/SamJ404/SymSwin_master/blob/main/illstration/diorx3_19840.jpg)
 
 
