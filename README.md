@@ -1,6 +1,6 @@
-# SymSwin:A Transformer-Based Super-Resolution Model Focusing on Multi-Scale Context for Remote-Sensing Images #
+# SymSwin: Multi-Scale-Aware Super-Resolution of Remote Sensing Images Based on Swin Transformers #
 ***
-This is the offical pytorch implementation of SymSwin. [[Paper]]() and [[pretrained model]](https://pan.baidu.com/s/1oVb69eNe2Xe-inGQYkosOA) (extraction code: jbv3) are available. Feel free to send emails to SAMantha404@163.com, discussion is welcome 🙌.  
+This is the offical pytorch implementation of SymSwin. [[Paper]](https://www.mdpi.com/2072-4292/16/24/4734) and [[pretrained model]](https://pan.baidu.com/s/1oVb69eNe2Xe-inGQYkosOA) (extraction code: jbv3) are available. Feel free to send emails to SAMantha404@163.com, discussion is welcome 🙌.  
 ## Contents 📖 ##  
 ***
 >[Brief Introduction](#section1)  
