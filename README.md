@@ -51,7 +51,7 @@ python main_train_psnr.py --opt .options/SymSwin_train.json
 ```  
 <a id='section22'></a>
 ### Testing 💪 ###  
-We provide SymSwin checkpoints pretrained on [[NWPU-RESISC45]](https://pan.baidu.com/s/1yUzb1pFUdpKufioxx1twbQ?pwd=7xcw) and [[DIOR]](https://pan.baidu.com/s/1yUzb1pFUdpKufioxx1twbQ?pwd=7xcw). (extraction code: jbv3)  
+We provide SymSwin checkpoints pretrained on [[NWPU-RESISC45]](https://pan.baidu.com/s/1yUzb1pFUdpKufioxx1twbQ?pwd=7xcw) and [[DIOR]](https://pan.baidu.com/s/1yUzb1pFUdpKufioxx1twbQ?pwd=7xcw). (extraction code: 7xcw)  
 * Download the checkpoints to `./checkpoints`. (Other folders you want, 'checkpoints' is recommended.)  
 * Prepare dataset HR-LR pair information.  
 ```
