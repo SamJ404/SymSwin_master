@@ -1,6 +1,6 @@
 # SymSwin: Multi-Scale-Aware Super-Resolution of Remote Sensing Images Based on Swin Transformers #
 ***
-This is the offical pytorch implementation of SymSwin. [[Paper]](https://www.mdpi.com/2072-4292/16/24/4734) and [[pretrained model]](https://pan.baidu.com/s/1oVb69eNe2Xe-inGQYkosOA) (extraction code: jbv3) are available. Feel free to send emails to SAMantha404@163.com, discussion is welcome 🙌.  
+This is the offical pytorch implementation of SymSwin. [[Paper]](https://www.mdpi.com/2072-4292/16/24/4734) and [[pretrained model]](https://pan.baidu.com/s/1yUzb1pFUdpKufioxx1twbQ?pwd=7xcw) (extraction code: 7xcw) are available. Feel free to send emails to SAMantha404@163.com, discussion is welcome 🙌.  
 ## Contents 📖 ##  
 ***
 >[Brief Introduction](#section1)  
@@ -51,7 +51,7 @@ python main_train_psnr.py --opt .options/SymSwin_train.json
 ```  
 <a id='section22'></a>
 ### Testing 💪 ###  
-We provide SymSwin checkpoints pretrained on [[NWPU-RESISC45]](https://pan.baidu.com/s/1oVb69eNe2Xe-inGQYkosOA) and [[DIOR]](https://pan.baidu.com/s/1oVb69eNe2Xe-inGQYkosOA). (extraction code: jbv3)  
+We provide SymSwin checkpoints pretrained on [[NWPU-RESISC45]](https://pan.baidu.com/s/1yUzb1pFUdpKufioxx1twbQ?pwd=7xcw) and [[DIOR]](https://pan.baidu.com/s/1yUzb1pFUdpKufioxx1twbQ?pwd=7xcw). (extraction code: jbv3)  
 * Download the checkpoints to `./checkpoints`. (Other folders you want, 'checkpoints' is recommended.)  
 * Prepare dataset HR-LR pair information.  
 ```
